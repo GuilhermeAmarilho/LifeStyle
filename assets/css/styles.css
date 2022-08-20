@@ -205,7 +205,6 @@ img {
     transition: right .3s;
   } 
 }
-
 .nav__list{
   padding: 5rem 0 0 3rem;
   display: flex;
@@ -227,7 +226,6 @@ img {
   color: var(--title-color);
   cursor: pointer;
 }
-
 .nav .nav__button{
   background-color: var(--text-color);
   border: none;
@@ -338,6 +336,7 @@ img {
 .logos__img{
   width: 120px;
 }
+
 /*=============== PROGRAM ===============*/
 
 
