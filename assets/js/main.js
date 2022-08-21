@@ -49,6 +49,44 @@ window.addEventListener('scroll', scrollHeader)
 
 
 /*=============== CALCULATE JS ===============*/
+const calculateForm = document.getElementById('calculate-form'), 
+ calculateCm = document.getElementById('calculate-cm'),
+ calculateKg = document.getElementById('calculate-kg'),
+ calculateMessage = document.getElementById('calculate-message');
 
+const calculateIMC = (e) => {
+    e.preventDefault();
+    // Testa se foram preenchidos os input
+    if(calculateCm.value === '' || calculateKg.value === ''){
+        // altera a cor
+        calculateMessage.classList.remove('color-green');
+        calculateMessage.classList.add('color-red');
 
+        // avisa o erro
+        calculateMessage.textContent = 'Informe a altura e o peso';
+
+        // remove a mensagem após 3 seg
+        setTimeout(() => {
+            calculateMessage.textContent = '';
+        }, 3000);
+    }else{
+        const cm = calculateCm.value / 100, kg = calculateKg.value, imc = Math.round(kg/(cm*cm));
+        // Define a saude
+        calculateMessage.classList.add('color-green');
+        if(imc < 18.5){
+            calculateMessage.textContent = `Seu IMC é ${imc} e você está magro 😓`;
+        }else if(imc < 25){
+            calculateMessage.textContent = `Seu IMC é ${imc} e você saudável 😍`;
+        }else{
+            calculateMessage.textContent = `Seu IMC é ${imc} e você está acima do peso 😬`;
+        }
+        calculateCm.value = '';
+        calculateKg.value = '';
+        // remove a mensagem após 5 seg
+        setTimeout(() => {
+            calculateMessage.textContent = '';
+        }, 5000);
+    }
+}
+calculateForm.addEventListener('submit', calculateIMC);
 /*=============== EMAIL JS ===============*/
