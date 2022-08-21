@@ -12,3 +12,6 @@
   - Email.JS
   - scrollReveal
 - UX/UI respeitados
+
+## Apresentação do projeto
+![imagem de apresentação](https://github.com/GuilhermeAmarilho/LifeStyle/blob/master/apresenta%C3%A7%C3%A3o.png)
