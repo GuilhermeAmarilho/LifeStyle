@@ -2,6 +2,9 @@
 
 > Projeto desenvolvido assistindo o conteúdo criado pelo canal Bedincode, para a criação de um website responsivo de academia.
 
+## Versão WEB
+- Para acessar a versão web, clique [aqui](https://guilhermeamarilho.github.io/LifeStyle/)
+
 ## Tecnologias utilizadas: 
 
 - html 5
