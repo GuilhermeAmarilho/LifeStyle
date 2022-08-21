@@ -10,6 +10,7 @@ if(navToggle){
         navMenu.classList.add('show-menu')
     })
 }
+
 /*===== MENU HIDDEN =====*/
 /* Validate if constant exists */
 if(navClose){
@@ -20,14 +21,12 @@ if(navClose){
 
 /*=============== REMOVE MENU MOBILE ===============*/
 const navLink = document.querySelectorAll('.nav__link')
-
 const linkAction = () =>{
     const navMenu = document.getElementById('nav-menu')
     // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show-menu')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
-
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 const scrollHeader = () =>{
@@ -89,4 +88,34 @@ const calculateIMC = (e) => {
     }
 }
 calculateForm.addEventListener('submit', calculateIMC);
+
 /*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById('contact-form'),
+ contactMessage = document.getElementById('contact-message'),
+ contactUser = document.getElementById('contact-user');
+
+const sendEmail = (e) =>{
+    e.preventDefault();
+    // Checa de o input foi preenchido
+    if(contactUser.value === ''){
+        contactMessage.classList.remove('color-gren');
+        contactMessage.classList.add('color-red');
+        contactMessage.textContent = "Informe seu email corretamente 👆🏽";
+        setTimeout(() => {
+            contactMessage.textContent = '';
+        }, 3000);
+    }else{
+        emailjs.sendForm('service_wg0ug9v', 'template_rtdhu7u', '#contact-form', 'GmVOMcV64jehynna-').then(() => {
+            contactMessage.classList.add('color-green');
+            contactMessage.textContent = 'Você se registrou com sucesso 👏🏽';
+            setTimeout(() => {
+                contactMessage.textContent = '';
+            }, 5000);
+        },(error) => {
+            alert("Opa, A sua solicitação falhou", error);     
+        });
+        contactUser.value='';
+    }
+} 
+
+contactForm.addEventListener('submit', sendEmail);
