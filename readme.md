@@ -4,6 +4,11 @@
 
 ## Tecnologias utilizadas: 
 
-Frameworks
-- RemixIcon
-- Email.JS
+- html 5
+- css 3
+- javascript
+- Frameworks
+  - RemixIcon
+  - Email.JS
+  - scrollReveal
+- UX/UI respeitados

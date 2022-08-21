@@ -66,7 +66,20 @@ const scrollUp = () =>{
 window.addEventListener('scroll', scrollUp);
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
-
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+});
+sr.reveal(`.home__data`);
+sr.reveal(`.home__img`, {delay: 700, origin: 'bottom'})
+sr.reveal(`.logos__img .program__card`, {interval: 100})
+sr.reveal(`.choose__img`, {origin: 'left'});
+sr.reveal(`.choose__content`, {origin: 'right '});
+sr.reveal(`.pricing`, {origin: 'bottom'});
+sr.reveal(`.calculate`, {origin: 'bottom'});
+sr.reveal(`.footer`, {origin: 'bottom'});
 
 /*=============== CALCULATE JS ===============*/
 const calculateForm = document.getElementById('calculate-form'), 
