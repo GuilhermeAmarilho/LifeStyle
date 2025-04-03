@@ -7,7 +7,7 @@ Projeto desenvolvido com foco em design responsivo, usabilidade e interatividade
 ## 🌐 Acesse o Projeto
 
 📲 **Versão Web:**  
-👉 [Clique aqui!](https://guilhermeamarilho.github.io/LifeStyle/)
+👉 [Clique aqui!](https://guilhermeamarilho.github.io/LifeStyle/main.html)
 
 ---
 
